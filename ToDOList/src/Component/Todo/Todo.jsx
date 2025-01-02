@@ -13,8 +13,8 @@ function Todo({ todoData, isFinished, chnageFinished}) {
                     }}
                 />
                 <div className="">{todoData}</div>
-                <button>Edit</button>
-                <button>Delete</button>
+                <button className='edit'>Edit</button>
+                <button className='delete'>Delete</button>
             </div>
         </>
     )

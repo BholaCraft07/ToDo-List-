@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-
+import './AddTodo.css';
 function AddTodo({updateList}) {
     const[inputText,setInputText] = useState('');
     return (
-        <>
+        <div className="addTodo-wrapper">
             <input
              type="text" 
              placeholder='add your next todo'
@@ -12,10 +12,12 @@ function AddTodo({updateList}) {
             />
             <button 
             onClick={()=>{
+               if(inputText.trim()!==''){
                 updateList(inputText);
                 setInputText('');
+               }
             }}>Add</button>
-        </>
+        </div>
     )
 }
 

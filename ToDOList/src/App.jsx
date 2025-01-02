@@ -9,12 +9,12 @@ function App() {
     { id: 2, todoData: "todo 2",finished:false},
   ]);
   return (
-    <>
+    <div className="main-container">
       <h1>TodoList</h1>
       <AddTodo updateList={
         (todo)=>setList([...list,{id:list.length+1,todoData:todo,finished:false}])}/>
       <TodoList list={list} updateList={setList}/>
-    </>
+    </div>
   )
 }
 

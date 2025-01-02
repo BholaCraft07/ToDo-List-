@@ -1,4 +1,5 @@
 .todo-wrapper{
+    width: 250px;
     display:flex;
     padding: 10px;
     gap:5px;
@@ -7,6 +8,9 @@
     font-size: 20px;
     align-items: center;
     text-align: center;
+    margin: 0.5px 0;
+    background-color:antiquewhite;
+    border-bottom:1px solid #ccc;
 }
 .todo-wrapper button{
     padding:10px 15px;
@@ -15,5 +19,12 @@
     border-radius: 7px;
     border: none;
     box-shadow:0 0 3px 0 rgba(0,0,0,0.2);
-    background: #ccc;
+}
+.edit{
+    background-color: rgb(90, 219, 90);
+    color: white;
+    margin:0 10px;
+}
+.delete{
+    background-color: orange;
 }
