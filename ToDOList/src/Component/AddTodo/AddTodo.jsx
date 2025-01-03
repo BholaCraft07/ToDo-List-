@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './AddTodo.css';
-function AddTodo({updateList}) {
+import TodoDispatchContext from '../../context/TodoDispatchContext';
+function AddTodo() {
     const[inputText,setInputText] = useState('');
+    const{dispatch}=useContext(TodoDispatchContext);
     return (
         <div className="addTodo-wrapper">
             <input
@@ -13,7 +15,9 @@ function AddTodo({updateList}) {
             <button 
             onClick={()=>{
                if(inputText.trim()!==''){
-                updateList(inputText);
+                dispatch({type:'add_todo',
+                    payload:{todoText:inputText}
+                })
                 setInputText('');
                }
             }}>Add</button>
